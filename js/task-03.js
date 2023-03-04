@@ -14,9 +14,13 @@ const images = [
 ];
 
 const markingImg = images.map(({ url, alt }) => 
-  `<li class="item-img-task03"><img src=${url} alt='${alt}'></li>`
+  `<li class="item"><img src=${url} alt='${alt}'></li>`
 ).join("");
 
-const galleryUl = document.querySelector(".gallery")
+const galleryUl = document.querySelector(".gallery");
 
 galleryUl.innerHTML = markingImg;
+
+galleryUl.style.listStyle = 'none';
+galleryUl.style.display = "grid";
+galleryUl.style.padding = "15px";
