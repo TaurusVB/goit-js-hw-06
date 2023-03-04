@@ -12,3 +12,11 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const markingImg = images.map(({ url, alt }) => 
+  `<li class="item-img-task03"><img src=${url} alt='${alt}'></li>`
+).join("");
+
+const galleryUl = document.querySelector(".gallery")
+
+galleryUl.innerHTML = markingImg;
